@@ -10,7 +10,7 @@ export class AppComponent {
   opA:number=0;
   opB:number=0;
 
-  onCalcular(){
+  onCalcular():void{
     this.rest=this.opA+this.opB;
     console.log(this.rest,this.opA,this.opB)
   }
