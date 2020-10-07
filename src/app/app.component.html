@@ -1,22 +1,14 @@
 <div class="container">
   <div class="row">
-    <div class="col-12"><h2>Aplicacion de Calculadora</h2></div>
+    <div class="col-12">
+      <h2>Aplicacion de Calculadora</h2>
+    </div>
   </div>
   <div class="row">
     <div class="col-12">
       <form>
-        <div class="form-group">
-          <label for="operandoA">Operando A</label>
-          <input type="number" class="form-control" name="operandoA" [(ngModel)]="opA" placeholder="Escribe un valor numerico">
-        </div>
-        <div class="form-group">
-          <label for="operandoB">Operando B</label>
-          <input type="number" class="form-control" name="operandoB" [(ngModel)]="opB" placeholder="Escribe un valor numerico">
-        </div>
-        <button type="submit" class="btn btn-primary" (click)="onCalcular()">Sumar</button>
-        <div class="form-group">
-          <label>Resultado: {{rest}}</label>
-        </div>
+        <app-formulario (onEnviar)="onCalcular($event)"></app-formulario>
+        <app-resultado [resultado]="rest"></app-resultado>
       </form>
     </div>
   </div>

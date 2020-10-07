@@ -7,12 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   rest:number=0;
-  opA:number=0;
-  opB:number=0;
-
-  onCalcular():void{
-    this.rest=this.opA+this.opB;
-    console.log(this.rest,this.opA,this.opB)
+ 
+  onCalcular(op:number[]):void{
+    this.rest=op[0]+op[1];
+    console.log(this.rest,op[0],op[1])
   }
 
   constructor(){}
